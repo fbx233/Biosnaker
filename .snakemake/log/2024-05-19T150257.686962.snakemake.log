@@ -1,0 +1,45 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        1
+mapping              1
+merge_counts         1
+remove_rRNA          1
+total                5
+
+Select jobs to execute...
+
+[Sun May 19 15:02:59 2024]
+rule remove_rRNA:
+    input: quality_control/DSP-1001660021325/DSP-1001660021325.clean.1.fastq.gz, quality_control/DSP-1001660021325/DSP-1001660021325.clean.2.fastq.gz
+    output: remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.rm_rRNA.fq.1.gz, remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/DSP-1001660021325.log
+    jobid: 4
+    reason: Missing output files: remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.rm_rRNA.fq.1.gz, remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.rm_rRNA.fq.2.gz
+    wildcards: sample=DSP-1001660021325
+    resources: tmpdir=/tmp
+
+[Sun May 19 15:02:59 2024]
+Error in rule remove_rRNA:
+    jobid: 4
+    input: quality_control/DSP-1001660021325/DSP-1001660021325.clean.1.fastq.gz, quality_control/DSP-1001660021325/DSP-1001660021325.clean.2.fastq.gz
+    output: remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.rm_rRNA.fq.1.gz, remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/DSP-1001660021325.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p remove_rRNA/fastq/DSP-1001660021325
+        bowtie2 -x /datapool/home/fengbx/data1/ref_genome/mouse_index/rRNA/Mus_musculus.rRNA.1.bt2 -1 quality_control/DSP-1001660021325/DSP-1001660021325.clean.1.fastq.gz -2 quality_control/DSP-1001660021325/DSP-1001660021325.clean.2.fastq.gz --un-conc-gz remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.rm_rRNA.fq -p 16 -S remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.aligned_rRNA.sam &> logs/remove_rRNA/DSP-1001660021325.log
+        rm remove_rRNA/fastq/DSP-1001660021325/DSP-1001660021325.aligned_rRNA.sam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-19T150257.686962.snakemake.log

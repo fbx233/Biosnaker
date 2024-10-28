@@ -1,0 +1,103 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        3
+mapping              3
+merge_counts         1
+remove_rRNA          3
+total               11
+
+Select jobs to execute...
+
+[Tue May 21 14:15:37 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq.gz
+    log: logs/remove_rRNA/P25-D16-1.log
+    jobid: 4
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+
+[Tue May 21 14:15:37 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq.gz
+    log: logs/remove_rRNA/P25-D16-2.log
+    jobid: 8
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+
+[Tue May 21 14:15:37 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq.gz
+    log: logs/remove_rRNA/P25-D16-3.log
+    jobid: 12
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+[Tue May 21 14:38:35 2024]
+Error in rule remove_rRNA:
+    jobid: 8
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq.gz
+    log: logs/remove_rRNA/P25-D16-2.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2
+        bowtie2 -x /datapool/home/fengbx/data1/ref_genome/index/rRNA/Homo_sapiens.rRNA -1 /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz -2 /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz --un-conc-gz /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq.gz -p 16 -S /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq.gz &> logs/remove_rRNA/P25-D16-2.log
+        rm /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.aligned_rRNA.sam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job remove_rRNA since they might be corrupted:
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq.gz
+[Tue May 21 14:39:33 2024]
+Error in rule remove_rRNA:
+    jobid: 4
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq.gz
+    log: logs/remove_rRNA/P25-D16-1.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1
+        bowtie2 -x /datapool/home/fengbx/data1/ref_genome/index/rRNA/Homo_sapiens.rRNA -1 /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz -2 /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz --un-conc-gz /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq.gz -p 16 -S /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq.gz &> logs/remove_rRNA/P25-D16-1.log
+        rm /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.aligned_rRNA.sam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job remove_rRNA since they might be corrupted:
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq.gz
+[Tue May 21 14:40:56 2024]
+Error in rule remove_rRNA:
+    jobid: 12
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq.gz
+    log: logs/remove_rRNA/P25-D16-3.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3
+        bowtie2 -x /datapool/home/fengbx/data1/ref_genome/index/rRNA/Homo_sapiens.rRNA -1 /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz -2 /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz --un-conc-gz /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq.gz -p 16 -S /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq.gz &> logs/remove_rRNA/P25-D16-3.log
+        rm /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.aligned_rRNA.sam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job remove_rRNA since they might be corrupted:
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq.gz
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-21T141534.881524.snakemake.log

@@ -1,0 +1,122 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+fastp                3
+featureCounts        3
+mapping              3
+merge_counts         1
+remove_rRNA          3
+total               14
+
+Select jobs to execute...
+
+[Mon May 20 16:12:16 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-1/P25-D16-1_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-1/P25-D16-1_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.html
+    log: logs/fastp/P25-D16-1.log
+    jobid: 5
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+
+[Mon May 20 16:12:16 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-3/P25-D16-3_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-3/P25-D16-3_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.html
+    log: logs/fastp/P25-D16-3.log
+    jobid: 13
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+
+[Mon May 20 16:12:16 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-2/P25-D16-2_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-2/P25-D16-2_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.html
+    log: logs/fastp/P25-D16-2.log
+    jobid: 9
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Mon May 20 16:14:00 2024]
+Finished job 9.
+1 of 14 steps (7%) done
+Select jobs to execute...
+
+[Mon May 20 16:14:00 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/P25-D16-2.log
+    jobid: 8
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Mon May 20 16:14:05 2024]
+Finished job 5.
+2 of 14 steps (14%) done
+Select jobs to execute...
+
+[Mon May 20 16:14:05 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/P25-D16-1.log
+    jobid: 4
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Mon May 20 16:14:08 2024]
+Finished job 13.
+3 of 14 steps (21%) done
+Select jobs to execute...
+
+[Mon May 20 16:14:08 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/P25-D16-3.log
+    jobid: 12
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+Waiting at most 60 seconds for missing files.
+MissingOutputException in rule remove_rRNA in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 54:
+Job 8  completed successfully, but some output files are missing. Missing files after 60 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+Waiting at most 60 seconds for missing files.
+MissingOutputException in rule remove_rRNA in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 54:
+Job 4  completed successfully, but some output files are missing. Missing files after 60 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+Terminating processes on user request, this might take some time.
+[Mon May 20 16:39:04 2024]
+Error in rule remove_rRNA:
+    jobid: 12
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/P25-D16-3.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p remove_rRNA/fastq/P25-D16-3
+        bowtie2 -x /datapool/home/fengbx/data1/ref_genome/index/rRNA/Homo_sapiens.rRNA -1 /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz -2 /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz --un-conc-gz remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq -p 16 -S remove_rRNA/fastq/P25-D16-3/P25-D16-3.aligned_rRNA.sam &> logs/remove_rRNA/P25-D16-3.log
+        rm remove_rRNA/fastq/P25-D16-3/P25-D16-3.aligned_rRNA.sam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2024-05-20T161213.997523.snakemake.log

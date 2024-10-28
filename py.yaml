@@ -1,0 +1,13 @@
+name: py
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - fastp
+  - fastqc
+  - bowtie2
+  - star
+  - subread
+  - samtools
+  - snakemake

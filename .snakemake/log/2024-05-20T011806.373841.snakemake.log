@@ -1,0 +1,129 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        3
+mapping              3
+merge_counts         1
+total                8
+
+Select jobs to execute...
+
+[Mon May 20 01:18:08 2024]
+rule mapping:
+    input: remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-2.log
+    jobid: 5
+    reason: Missing output files: mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+
+[Mon May 20 01:18:08 2024]
+rule mapping:
+    input: remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-3.log
+    jobid: 7
+    reason: Missing output files: mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+
+[Mon May 20 01:18:08 2024]
+rule mapping:
+    input: remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-1.log
+    jobid: 3
+    reason: Missing output files: mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Mon May 20 01:43:12 2024]
+Finished job 5.
+1 of 8 steps (12%) done
+Select jobs to execute...
+
+[Mon May 20 01:43:12 2024]
+rule featureCounts:
+    input: mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    output: read_counts/P25-D16-2/P25-D16-2.featurecounts.txt, read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt
+    log: logs/featureCounts/P25-D16-2.log
+    jobid: 4
+    reason: Missing output files: read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt; Input files updated by another job: mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Mon May 20 01:43:30 2024]
+Finished job 4.
+2 of 8 steps (25%) done
+[Mon May 20 01:44:13 2024]
+Finished job 3.
+3 of 8 steps (38%) done
+Select jobs to execute...
+
+[Mon May 20 01:44:13 2024]
+rule featureCounts:
+    input: mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    output: read_counts/P25-D16-1/P25-D16-1.featurecounts.txt, read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt
+    log: logs/featureCounts/P25-D16-1.log
+    jobid: 2
+    reason: Missing output files: read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt; Input files updated by another job: mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Mon May 20 01:44:32 2024]
+Finished job 2.
+4 of 8 steps (50%) done
+[Mon May 20 01:44:57 2024]
+Finished job 7.
+5 of 8 steps (62%) done
+Select jobs to execute...
+
+[Mon May 20 01:44:57 2024]
+rule featureCounts:
+    input: mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    output: read_counts/P25-D16-3/P25-D16-3.featurecounts.txt, read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    log: logs/featureCounts/P25-D16-3.log
+    jobid: 6
+    reason: Missing output files: read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt; Input files updated by another job: mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+[Mon May 20 01:45:16 2024]
+Finished job 6.
+6 of 8 steps (75%) done
+Select jobs to execute...
+
+[Mon May 20 01:45:16 2024]
+rule merge_counts:
+    input: read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    output: read_counts/result/count.all.txt
+    log: logs/merge_counts.log
+    jobid: 1
+    reason: Missing output files: read_counts/result/count.all.txt; Input files updated by another job: read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    resources: tmpdir=/tmp
+
+[Mon May 20 01:45:16 2024]
+Finished job 1.
+7 of 8 steps (88%) done
+Select jobs to execute...
+
+[Mon May 20 01:45:16 2024]
+localrule all:
+    input: read_counts/result/count.all.txt
+    jobid: 0
+    reason: Input files updated by another job: read_counts/result/count.all.txt
+    resources: tmpdir=/tmp
+
+[Mon May 20 01:45:16 2024]
+Finished job 0.
+8 of 8 steps (100%) done
+Complete log: .snakemake/log/2024-05-20T011806.373841.snakemake.log

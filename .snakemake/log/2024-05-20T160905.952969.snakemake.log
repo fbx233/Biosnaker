@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in rule all in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 14:
+Missing input files for rule all:
+    affected files:
+        read_counts/result/count.all.txt

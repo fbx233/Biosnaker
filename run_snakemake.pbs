@@ -1,0 +1,20 @@
+#!/bin/bash
+#PBS -N snakemake_job
+#PBS -l nodes=4:ppn=32
+#PBS -l walltime=48:00:00
+#PBS -l mem=1024gb
+#PBS -q default
+#PBS -o log_out_path
+#PBS -e error_out_path
+
+# 进入提交作业的目录
+cd snake_file_path
+
+export PATH=$path_to_your_env/bin:$PATH 
+
+# 激活你的conda环境
+source activate your_env
+
+
+# 运行Snakemake
+snakemake --cluster "qsub -l nodes=1:ppn=32 -l walltime=48:00:00" --jobs 4 --cores 128

@@ -1,0 +1,99 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        3
+mapping              3
+merge_counts         1
+total                8
+
+Select jobs to execute...
+
+[Mon May 20 00:47:15 2024]
+rule mapping:
+    input: remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-2.log
+    jobid: 5
+    reason: Missing output files: mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+
+[Mon May 20 00:47:15 2024]
+rule mapping:
+    input: remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-3.log
+    jobid: 7
+    reason: Missing output files: mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+
+[Mon May 20 00:47:16 2024]
+rule mapping:
+    input: remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-1.log
+    jobid: 3
+    reason: Missing output files: mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Mon May 20 00:47:16 2024]
+Error in rule mapping:
+    jobid: 7
+    input: remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-3.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p mapping_expression/P25-D16-3
+        STAR --runThreadN 32 --limitBAMsortRAM 20000000000 --outFilterType BySJout --outFilterMismatchNmax 10 --genomeDir /datapool/home/fengbx/data1/ref_genome/index/STAR/genome --readFilesIn remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq --readFilesCommand zcat --outFileNamePrefix mapping_expression/P25-D16-3/P25-D16-3 --outSAMtype BAM Unsorted --quantMode TranscriptomeSAM GeneCounts --outSAMattributes All --outSAMstrandField intronMotif --outBAMcompression 6 --outReadsUnmapped Fastx &> logs/mapping/P25-D16-3.log
+        samtools sort -T mapping_expression/P25-D16-3/P25-D16-3Aligned.out.sorted -o mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam mapping_expression/P25-D16-3/P25-D16-3Aligned.out.bam
+        samtools index mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon May 20 00:47:16 2024]
+[Mon May 20 00:47:16 2024]
+Error in rule mapping:
+    jobid: 5
+    input: remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-2.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p mapping_expression/P25-D16-2
+        STAR --runThreadN 32 --limitBAMsortRAM 20000000000 --outFilterType BySJout --outFilterMismatchNmax 10 --genomeDir /datapool/home/fengbx/data1/ref_genome/index/STAR/genome --readFilesIn remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq --readFilesCommand zcat --outFileNamePrefix mapping_expression/P25-D16-2/P25-D16-2 --outSAMtype BAM Unsorted --quantMode TranscriptomeSAM GeneCounts --outSAMattributes All --outSAMstrandField intronMotif --outBAMcompression 6 --outReadsUnmapped Fastx &> logs/mapping/P25-D16-2.log
+        samtools sort -T mapping_expression/P25-D16-2/P25-D16-2Aligned.out.sorted -o mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam mapping_expression/P25-D16-2/P25-D16-2Aligned.out.bam
+        samtools index mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule mapping:
+    jobid: 3
+    input: remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq, remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq
+    output: mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    log: logs/mapping/P25-D16-1.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p mapping_expression/P25-D16-1
+        STAR --runThreadN 32 --limitBAMsortRAM 20000000000 --outFilterType BySJout --outFilterMismatchNmax 10 --genomeDir /datapool/home/fengbx/data1/ref_genome/index/STAR/genome --readFilesIn remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq --readFilesCommand zcat --outFileNamePrefix mapping_expression/P25-D16-1/P25-D16-1 --outSAMtype BAM Unsorted --quantMode TranscriptomeSAM GeneCounts --outSAMattributes All --outSAMstrandField intronMotif --outBAMcompression 6 --outReadsUnmapped Fastx &> logs/mapping/P25-D16-1.log
+        samtools sort -T mapping_expression/P25-D16-1/P25-D16-1Aligned.out.sorted -o mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam mapping_expression/P25-D16-1/P25-D16-1Aligned.out.bam
+        samtools index mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-20T004713.328112.snakemake.log

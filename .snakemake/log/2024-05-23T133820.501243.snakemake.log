@@ -1,0 +1,182 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        3
+mapping              2
+merge_counts         1
+total                7
+
+Resources before job selection: {'_cores': 16, '_nodes': 9223372036854775807}
+Ready jobs (3)
+Select jobs to execute...
+Selected jobs (3)
+Resources after job selection: {'_cores': 13, '_nodes': 9223372036854775804}
+
+[Thu May 23 13:38:25 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-2.log
+    jobid: 5
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+
+[Thu May 23 13:38:25 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-3.log
+    jobid: 6
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+
+[Thu May 23 13:38:25 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-1.log
+    jobid: 3
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Thu May 23 13:38:48 2024]
+Finished job 6.
+1 of 7 steps (14%) done
+[Thu May 23 14:03:16 2024]
+Finished job 5.
+2 of 7 steps (29%) done
+Resources before job selection: {'_cores': 15, '_nodes': 9223372036854775806}
+Ready jobs (1)
+Select jobs to execute...
+Using greedy selector because only single job has to be scheduled.
+Selected jobs (1)
+Resources after job selection: {'_cores': 14, '_nodes': 9223372036854775805}
+
+[Thu May 23 14:03:16 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-2.log
+    jobid: 4
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Thu May 23 14:03:34 2024]
+Finished job 4.
+3 of 7 steps (43%) done
+[Thu May 23 14:04:22 2024]
+Finished job 3.
+4 of 7 steps (57%) done
+Resources before job selection: {'_cores': 16, '_nodes': 9223372036854775807}
+Ready jobs (1)
+Select jobs to execute...
+Using greedy selector because only single job has to be scheduled.
+Selected jobs (1)
+Resources after job selection: {'_cores': 15, '_nodes': 9223372036854775806}
+
+[Thu May 23 14:04:22 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-1.log
+    jobid: 2
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Thu May 23 14:04:41 2024]
+Finished job 2.
+5 of 7 steps (71%) done
+Resources before job selection: {'_cores': 16, '_nodes': 9223372036854775807}
+Ready jobs (1)
+Select jobs to execute...
+Using greedy selector because only single job has to be scheduled.
+Selected jobs (1)
+Resources after job selection: {'_cores': 15, '_nodes': 9223372036854775806}
+
+[Thu May 23 14:04:41 2024]
+rule merge_counts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/merge_counts.log
+    jobid: 1
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt; Code has changed since last execution
+    resources: tmpdir=/tmp
+
+Full Traceback (most recent call last):
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2656, in run_wrapper
+    run(
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 271, in __rule_merge_counts
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/shell.py", line 294, in __new__
+    raise sp.CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'set -euo pipefail;  
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/read_counts/result
+        python path_to_python_script.py --input_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt --output_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt' returned non-zero exit status 2.
+
+[Thu May 23 14:04:41 2024]
+Error in rule merge_counts:
+    jobid: 1
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/merge_counts.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/read_counts/result
+        python path_to_python_script.py --input_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt --output_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Full Traceback (most recent call last):
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2656, in run_wrapper
+    run(
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 271, in __rule_merge_counts
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/shell.py", line 294, in __new__
+    raise sp.CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'set -euo pipefail;  
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/read_counts/result
+        python path_to_python_script.py --input_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt --output_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt' returned non-zero exit status 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 715, in _callback
+    raise ex
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 699, in cached_or_run
+    run_func(*args)
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2692, in run_wrapper
+    raise RuleException(
+snakemake.exceptions.RuleException: CalledProcessError in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 120:
+Command 'set -euo pipefail;  
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/read_counts/result
+        python path_to_python_script.py --input_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt --output_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt' returned non-zero exit status 2.
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 120, in __rule_merge_counts
+
+RuleException:
+CalledProcessError in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 120:
+Command 'set -euo pipefail;  
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/read_counts/result
+        python path_to_python_script.py --input_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt --output_path /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt' returned non-zero exit status 2.
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 120, in __rule_merge_counts
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-23T133820.501243.snakemake.log
+unlocking
+removing lock
+removing lock
+removed all locks

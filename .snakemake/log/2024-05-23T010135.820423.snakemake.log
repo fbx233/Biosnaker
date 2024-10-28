@@ -1,0 +1,56 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 4
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        3
+mapping              3
+merge_counts         1
+total                8
+
+Select jobs to execute...
+
+[Thu May 23 01:01:38 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-2.log
+    jobid: 5
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: mem_mb=7422, mem_mib=7079, disk_mb=7422, disk_mib=7079, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 33):
+
+
+[Thu May 23 01:01:38 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-3.log
+    jobid: 7
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-3
+    resources: mem_mb=8228, mem_mib=7847, disk_mb=8228, disk_mib=7847, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 33):
+
+
+[Thu May 23 01:01:38 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-1.log
+    jobid: 3
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: mem_mb=7775, mem_mib=7415, disk_mb=7775, disk_mib=7415, tmpdir=<TBD>
+
+Error submitting jobscript (exit code 33):
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-23T010135.820423.snakemake.log

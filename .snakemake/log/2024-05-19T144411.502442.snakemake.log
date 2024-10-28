@@ -1,0 +1,61 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+fastp                2
+featureCounts        2
+mapping              2
+merge_counts         1
+remove_rRNA          2
+total               10
+
+Select jobs to execute...
+
+[Sun May 19 14:44:14 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/sample1/sample1_R1.fq.gz, /datapool/home/fengbx/data3/test/data/sample1/sample1_R2.fq.gz
+    output: quality_control/sample1/sample1.clean.1.fastq.gz, quality_control/sample1/sample1.clean.2.fastq.gz, quality_control/sample1/sample1.json, quality_control/sample1/sample1.html
+    log: logs/fastp/sample1.log
+    jobid: 5
+    reason: Missing output files: quality_control/sample1/sample1.clean.1.fastq.gz, quality_control/sample1/sample1.clean.2.fastq.gz
+    wildcards: sample=sample1
+    resources: tmpdir=/tmp
+
+
+[Sun May 19 14:44:14 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/DSP-1001660021325/DSP-1001660021325_R1.fq.gz, /datapool/home/fengbx/data3/test/data/DSP-1001660021325/DSP-1001660021325_R2.fq.gz
+    output: quality_control/DSP-1001660021325/DSP-1001660021325.clean.1.fastq.gz, quality_control/DSP-1001660021325/DSP-1001660021325.clean.2.fastq.gz, quality_control/DSP-1001660021325/DSP-1001660021325.json, quality_control/DSP-1001660021325/DSP-1001660021325.html
+    log: logs/fastp/DSP-1001660021325.log
+    jobid: 9
+    reason: Missing output files: quality_control/DSP-1001660021325/DSP-1001660021325.clean.1.fastq.gz, quality_control/DSP-1001660021325/DSP-1001660021325.clean.2.fastq.gz
+    wildcards: sample=DSP-1001660021325
+    resources: tmpdir=/tmp
+
+[Sun May 19 14:44:15 2024]
+Error in rule fastp:
+    jobid: 5
+    input: /datapool/home/fengbx/data3/test/data/sample1/sample1_R1.fq.gz, /datapool/home/fengbx/data3/test/data/sample1/sample1_R2.fq.gz
+    output: quality_control/sample1/sample1.clean.1.fastq.gz, quality_control/sample1/sample1.clean.2.fastq.gz, quality_control/sample1/sample1.json, quality_control/sample1/sample1.html
+    log: logs/fastp/sample1.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p quality_control/sample1
+        fastp -i /datapool/home/fengbx/data3/test/data/sample1/sample1_R1.fq.gz -I /datapool/home/fengbx/data3/test/data/sample1/sample1_R2.fq.gz -o quality_control/sample1/sample1.clean.1.fastq.gz -O quality_control/sample1/sample1.clean.2.fastq.gz --thread=4 -l 15 -j quality_control/sample1/sample1.json -h quality_control/sample1/sample1.html &> logs/fastp/sample1.log
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job fastp since they might be corrupted:
+quality_control/sample1/sample1.clean.1.fastq.gz, quality_control/sample1/sample1.clean.2.fastq.gz
+[Sun May 19 14:44:15 2024]
+Finished job 9.
+1 of 10 steps (10%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-19T144411.502442.snakemake.log

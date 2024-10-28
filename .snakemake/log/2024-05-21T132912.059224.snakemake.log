@@ -1,0 +1,8 @@
+Building DAG of jobs...
+MissingInputException in rule mapping in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 74:
+Missing input files for rule mapping:
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    affected files:
+        /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq
+        /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq

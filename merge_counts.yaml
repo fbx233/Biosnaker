@@ -1,0 +1,6 @@
+name: merge_counts
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - pandas

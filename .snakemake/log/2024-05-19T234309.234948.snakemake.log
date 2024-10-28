@@ -1,0 +1,95 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+fastp                3
+featureCounts        3
+mapping              3
+merge_counts         1
+remove_rRNA          3
+total               14
+
+Select jobs to execute...
+
+[Sun May 19 23:43:11 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-1/P25-D16-1_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-1/P25-D16-1_R2.fq.gz
+    output: quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz, quality_control/P25-D16-1/P25-D16-1.json, quality_control/P25-D16-1/P25-D16-1.html
+    log: logs/fastp/P25-D16-1.log
+    jobid: 5
+    reason: Missing output files: quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+
+[Sun May 19 23:43:11 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-3/P25-D16-3_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-3/P25-D16-3_R2.fq.gz
+    output: quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz, quality_control/P25-D16-3/P25-D16-3.json, quality_control/P25-D16-3/P25-D16-3.html
+    log: logs/fastp/P25-D16-3.log
+    jobid: 13
+    reason: Missing output files: quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+
+[Sun May 19 23:43:11 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-2/P25-D16-2_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-2/P25-D16-2_R2.fq.gz
+    output: quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz, quality_control/P25-D16-2/P25-D16-2.json, quality_control/P25-D16-2/P25-D16-2.html
+    log: logs/fastp/P25-D16-2.log
+    jobid: 9
+    reason: Code has changed since last execution
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Sun May 19 23:44:55 2024]
+Finished job 9.
+1 of 14 steps (7%) done
+Select jobs to execute...
+
+[Sun May 19 23:44:55 2024]
+rule remove_rRNA:
+    input: quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    output: remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/P25-D16-2.log
+    jobid: 8
+    reason: Missing output files: remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz, remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz; Input files updated by another job: quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz, quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Sun May 19 23:44:59 2024]
+Finished job 5.
+2 of 14 steps (14%) done
+Select jobs to execute...
+
+[Sun May 19 23:44:59 2024]
+rule remove_rRNA:
+    input: quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    output: remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/P25-D16-1.log
+    jobid: 4
+    reason: Missing output files: remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz; Input files updated by another job: quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Sun May 19 23:45:04 2024]
+Finished job 13.
+3 of 14 steps (21%) done
+Select jobs to execute...
+
+[Sun May 19 23:45:04 2024]
+rule remove_rRNA:
+    input: quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    output: remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz, remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/P25-D16-3.log
+    jobid: 12
+    reason: Missing output files: remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz, remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz; Input files updated by another job: quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+

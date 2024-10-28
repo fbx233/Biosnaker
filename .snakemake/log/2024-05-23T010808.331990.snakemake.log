@@ -1,0 +1,119 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        3
+mapping              3
+merge_counts         1
+total                8
+
+Select jobs to execute...
+
+[Thu May 23 01:08:11 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-2.log
+    jobid: 5
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+
+[Thu May 23 01:08:11 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-3.log
+    jobid: 7
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+
+[Thu May 23 01:08:11 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-1.log
+    jobid: 3
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Thu May 23 01:33:06 2024]
+Finished job 5.
+1 of 8 steps (12%) done
+Select jobs to execute...
+
+[Thu May 23 01:33:06 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-2.log
+    jobid: 4
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Thu May 23 01:33:24 2024]
+Finished job 4.
+2 of 8 steps (25%) done
+[Thu May 23 01:34:10 2024]
+Finished job 3.
+3 of 8 steps (38%) done
+Select jobs to execute...
+
+[Thu May 23 01:34:10 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-1.log
+    jobid: 2
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Thu May 23 01:34:29 2024]
+Finished job 2.
+4 of 8 steps (50%) done
+[Thu May 23 01:34:41 2024]
+Finished job 7.
+5 of 8 steps (62%) done
+Select jobs to execute...
+
+[Thu May 23 01:34:41 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-3.log
+    jobid: 6
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+[Thu May 23 01:35:00 2024]
+Finished job 6.
+6 of 8 steps (75%) done
+Select jobs to execute...
+
+[Thu May 23 01:35:00 2024]
+rule merge_counts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/merge_counts.log
+    jobid: 1
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt
+    resources: tmpdir=/tmp
+
+RuleException in rule merge_counts in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 113:
+NameError: The name ' next; ' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+        mkdir -p {config[output_path]}read_counts/result
+        awk 'FNR==1 && NR!=1 { next; } FNR==1 { print; } { print $0; }' {input} > {output} 2> {log}
+        

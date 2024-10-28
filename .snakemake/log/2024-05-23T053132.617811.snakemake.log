@@ -1,0 +1,3 @@
+NameError in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 111:
+name 'samples' is not defined
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 111, in <module>

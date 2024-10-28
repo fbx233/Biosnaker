@@ -1,0 +1,11 @@
+Full Traceback (most recent call last):
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/__init__.py", line 671, in snakemake
+    workflow.include(
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/workflow.py", line 1389, in include
+    exec(compile(code, snakefile.get_path_or_uri(), "exec"), self.globals)
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 242, in <module>
+NameError: name 'samples' is not defined
+
+NameError in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 112:
+name 'samples' is not defined
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 112, in <module>

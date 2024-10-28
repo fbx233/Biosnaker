@@ -1,0 +1,39 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+generate_sample_info        1
+total                       2
+
+Select jobs to execute...
+
+[Fri May 24 23:26:06 2024]
+rule generate_sample_info:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/sample_info.log
+    jobid: 1
+    reason: Code has changed since last execution
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:26:07 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Fri May 24 23:26:07 2024]
+localrule all:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    jobid: 0
+    reason: Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:26:07 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-05-24T232603.536445.snakemake.log

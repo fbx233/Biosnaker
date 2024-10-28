@@ -1,0 +1,7 @@
+__default__:
+  account: <your account>
+  walltime: 02:00:00
+  nodes: 8
+  ppn: 8
+  mem: 128gb
+  partition: node2

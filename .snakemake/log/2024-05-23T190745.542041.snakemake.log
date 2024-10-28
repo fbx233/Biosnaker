@@ -1,0 +1,53 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job             count
+------------  -------
+all                 1
+merge_counts        1
+total               2
+
+Resources before job selection: {'_cores': 16, '_nodes': 9223372036854775807}
+Ready jobs (1)
+Select jobs to execute...
+Using greedy selector because only single job has to be scheduled.
+Selected jobs (1)
+Resources after job selection: {'_cores': 15, '_nodes': 9223372036854775806}
+
+[Thu May 23 19:07:49 2024]
+rule merge_counts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/merge_counts.log
+    jobid: 1
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    resources: tmpdir=/tmp
+
+[Thu May 23 19:07:51 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Resources before job selection: {'_cores': 16, '_nodes': 9223372036854775807}
+Ready jobs (1)
+Select jobs to execute...
+Using greedy selector because only single job has to be scheduled.
+Selected jobs (1)
+Resources after job selection: {'_cores': 15, '_nodes': 9223372036854775806}
+
+[Thu May 23 19:07:51 2024]
+localrule all:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    jobid: 0
+    reason: Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    resources: tmpdir=/tmp
+
+[Thu May 23 19:07:51 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-05-23T190745.542041.snakemake.log
+unlocking
+removing lock
+removing lock
+removed all locks

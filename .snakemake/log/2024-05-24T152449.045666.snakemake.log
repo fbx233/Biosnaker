@@ -1,0 +1,93 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+generate_sample_info        1
+total                       2
+
+Resources before job selection: {'_cores': 16, '_nodes': 9223372036854775807}
+Ready jobs (1)
+Select jobs to execute...
+Using greedy selector because only single job has to be scheduled.
+Selected jobs (1)
+Resources after job selection: {'_cores': 15, '_nodes': 9223372036854775806}
+
+[Fri May 24 15:24:52 2024]
+rule generate_sample_info:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/sample_info.log
+    jobid: 1
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    resources: tmpdir=/tmp
+
+Full Traceback (most recent call last):
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2656, in run_wrapper
+    run(
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 310, in __rule_generate_sample_info
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/shell.py", line 294, in __new__
+    raise sp.CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'set -euo pipefail;  
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/deseq2/data
+        python3 /datapool/home/fengbx/data3/test/scripts/generate_sample_info.py --input_files /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt --output_file /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv' returned non-zero exit status 2.
+
+[Fri May 24 15:24:53 2024]
+Error in rule generate_sample_info:
+    jobid: 1
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/sample_info.log (check log file(s) for error details)
+    conda-env: /datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_
+    shell:
+        
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/deseq2/data
+        python3 /datapool/home/fengbx/data3/test/scripts/generate_sample_info.py --input_files /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt --output_file /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Full Traceback (most recent call last):
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2656, in run_wrapper
+    run(
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 310, in __rule_generate_sample_info
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/shell.py", line 294, in __new__
+    raise sp.CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'set -euo pipefail;  
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/deseq2/data
+        python3 /datapool/home/fengbx/data3/test/scripts/generate_sample_info.py --input_files /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt --output_file /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv' returned non-zero exit status 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 715, in _callback
+    raise ex
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 699, in cached_or_run
+    run_func(*args)
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/site-packages/snakemake/executors/__init__.py", line 2692, in run_wrapper
+    raise RuleException(
+snakemake.exceptions.RuleException: CalledProcessError in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 136:
+Command 'set -euo pipefail;  
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/deseq2/data
+        python3 /datapool/home/fengbx/data3/test/scripts/generate_sample_info.py --input_files /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt --output_file /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv' returned non-zero exit status 2.
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 136, in __rule_generate_sample_info
+
+RuleException:
+CalledProcessError in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 136:
+Command 'set -euo pipefail;  
+        mkdir -p /datapool/home/fengbx/data3/test/results/test_result/deseq2/data
+        python3 /datapool/home/fengbx/data3/test/scripts/generate_sample_info.py --input_files /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt --output_file /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv' returned non-zero exit status 2.
+  File "/datapool/home/fengbx/data3/test/scripts/snakefile", line 136, in __rule_generate_sample_info
+  File "/datapool/home/fengbx/mambaforge/envs/bioinfo_env/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-24T152449.045666.snakemake.log
+unlocking
+removing lock
+removing lock
+removed all locks

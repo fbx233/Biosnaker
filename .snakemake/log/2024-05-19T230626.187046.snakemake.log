@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        1
+mapping              1
+merge_counts         1
+remove_rRNA          1
+total                5
+
+Select jobs to execute...
+
+[Sun May 19 23:06:28 2024]
+rule remove_rRNA:
+    input: quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    output: remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+    log: logs/remove_rRNA/P25-D16-2.log
+    jobid: 4
+    reason: Missing output files: remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz, remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule remove_rRNA in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 52:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz
+remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-19T230626.187046.snakemake.log

@@ -1,0 +1,22 @@
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Creating conda environment envs/bioinfo.yaml...
+Downloading and installing remote packages.
+CreateCondaEnvironmentException:
+Could not create conda environment from /datapool/home/fengbx/data3/test/scripts/envs/bioinfo.yaml:
+Command:
+conda env create --quiet --file "/datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_.yaml" --prefix "/datapool/home/fengbx/data3/test/scripts/.snakemake/conda/b8a1672677b8f2d286e5d40dd717fb88_"
+Output:
+Collecting package metadata (repodata.json): ...working... failed
+
+UnavailableInvalidChannel: The channel is not accessible or is invalid.
+  channel name: anaconda/pkgs/main
+  channel url: https://mirrors.aliyun.com/anaconda/pkgs/main
+  error code: 404
+
+You will need to adjust your conda configuration to proceed.
+Use `conda config --show channels` to view your configuration's current state,
+and use `conda config --show-sources` to view config file locations.
+
+
+

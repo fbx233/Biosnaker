@@ -1,0 +1,67 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job              count
+-------------  -------
+all                  1
+featureCounts        3
+mapping              3
+merge_counts         1
+remove_rRNA          3
+total               11
+
+Select jobs to execute...
+
+[Wed May 22 23:59:15 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-D16-1.log
+    jobid: 4
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+
+[Wed May 22 23:59:15 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-D16-2.log
+    jobid: 8
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+
+[Wed May 22 23:59:15 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-D16-3.log
+    jobid: 12
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule remove_rRNA in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 54:
+Job 8  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.1.fq.gz
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.2.fq.gz
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule remove_rRNA in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 54:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.1.fq.gz
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.2.fq.gz
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule remove_rRNA in file /datapool/home/fengbx/data3/test/scripts/snakefile, line 54:
+Job 12  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.1.fq.gz
+/datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.2.fq.gz
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-05-22T235912.780848.snakemake.log

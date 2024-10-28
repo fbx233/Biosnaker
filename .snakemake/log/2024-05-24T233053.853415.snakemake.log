@@ -1,0 +1,590 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                     count
+--------------------  -------
+all                         1
+fastp                       9
+featureCounts               9
+generate_sample_info        1
+mapping                     9
+merge_counts                1
+remove_rRNA                 9
+total                      39
+
+Select jobs to execute...
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-1/P25-D16-1_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-1/P25-D16-1_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-D16-1.log
+    jobid: 6
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-Regrow-1-D8-2.log
+    jobid: 34
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.clean.2.fastq.gz
+    wildcards: sample=P25-Regrow-1-D8-2
+    resources: tmpdir=/tmp
+
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-2/P25-D16-2_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-2/P25-D16-2_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-D16-2.log
+    jobid: 10
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-Par-2/P25-Par-2_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-Par-2/P25-Par-2_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-Par-2.log
+    jobid: 22
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.clean.2.fastq.gz
+    wildcards: sample=P25-Par-2
+    resources: tmpdir=/tmp
+
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-Regrow-1-D8-3.log
+    jobid: 38
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.clean.2.fastq.gz
+    wildcards: sample=P25-Regrow-1-D8-3
+    resources: tmpdir=/tmp
+
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-Par-3/P25-Par-3_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-Par-3/P25-Par-3_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-Par-3.log
+    jobid: 26
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.clean.1.fastq.gz
+    wildcards: sample=P25-Par-3
+    resources: tmpdir=/tmp
+
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-D16-3/P25-D16-3_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-D16-3/P25-D16-3_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-D16-3.log
+    jobid: 14
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-Regrow-1-D8-1.log
+    jobid: 30
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.clean.2.fastq.gz
+    wildcards: sample=P25-Regrow-1-D8-1
+    resources: tmpdir=/tmp
+
+
+[Fri May 24 23:30:58 2024]
+rule fastp:
+    input: /datapool/home/fengbx/data3/test/data/P25-Par-1/P25-Par-1_R1.fq.gz, /datapool/home/fengbx/data3/test/data/P25-Par-1/P25-Par-1_R2.fq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.json, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.html
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/fastp/P25-Par-1.log
+    jobid: 18
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.clean.2.fastq.gz
+    wildcards: sample=P25-Par-1
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:33:00 2024]
+Finished job 18.
+1 of 39 steps (3%) done
+Select jobs to execute...
+
+[Fri May 24 23:33:00 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-1/P25-Par-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-1/P25-Par-1.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-Par-1.log
+    jobid: 17
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-1/P25-Par-1.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-1/P25-Par-1.rm_rRNA.fq.1.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-1/P25-Par-1.clean.2.fastq.gz
+    wildcards: sample=P25-Par-1
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:33:22 2024]
+Finished job 38.
+2 of 39 steps (5%) done
+Select jobs to execute...
+
+[Fri May 24 23:33:22 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-Regrow-1-D8-3.log
+    jobid: 37
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.rm_rRNA.fq.2.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.clean.2.fastq.gz
+    wildcards: sample=P25-Regrow-1-D8-3
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:33:27 2024]
+Finished job 30.
+3 of 39 steps (8%) done
+Select jobs to execute...
+
+[Fri May 24 23:33:27 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-Regrow-1-D8-1.log
+    jobid: 29
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.rm_rRNA.fq.2.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.clean.2.fastq.gz
+    wildcards: sample=P25-Regrow-1-D8-1
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:33:27 2024]
+Finished job 14.
+4 of 39 steps (10%) done
+Select jobs to execute...
+
+[Fri May 24 23:33:27 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-D16-3.log
+    jobid: 13
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-3/P25-D16-3.clean.2.fastq.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:33:46 2024]
+Finished job 10.
+5 of 39 steps (13%) done
+Select jobs to execute...
+
+[Fri May 24 23:33:46 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-D16-2.log
+    jobid: 9
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-2/P25-D16-2.clean.2.fastq.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:33:52 2024]
+Finished job 6.
+6 of 39 steps (15%) done
+Select jobs to execute...
+
+[Fri May 24 23:33:52 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-D16-1.log
+    jobid: 5
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-D16-1/P25-D16-1.clean.2.fastq.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:34:23 2024]
+Finished job 34.
+7 of 39 steps (18%) done
+Select jobs to execute...
+
+[Fri May 24 23:34:23 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-Regrow-1-D8-2.log
+    jobid: 33
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.rm_rRNA.fq.2.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.clean.2.fastq.gz
+    wildcards: sample=P25-Regrow-1-D8-2
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:34:25 2024]
+Finished job 26.
+8 of 39 steps (21%) done
+Select jobs to execute...
+
+[Fri May 24 23:34:25 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-3/P25-Par-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-3/P25-Par-3.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-Par-3.log
+    jobid: 25
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-3/P25-Par-3.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-3/P25-Par-3.rm_rRNA.fq.1.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.clean.2.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-3/P25-Par-3.clean.1.fastq.gz
+    wildcards: sample=P25-Par-3
+    resources: tmpdir=/tmp
+
+[Fri May 24 23:36:30 2024]
+Finished job 22.
+9 of 39 steps (23%) done
+Select jobs to execute...
+
+[Fri May 24 23:36:30 2024]
+rule remove_rRNA:
+    input: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.clean.2.fastq.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-2/P25-Par-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-2/P25-Par-2.rm_rRNA.fq.2.gz
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/remove_rRNA/P25-Par-2.log
+    jobid: 21
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-2/P25-Par-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-2/P25-Par-2.rm_rRNA.fq.2.gz; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.clean.1.fastq.gz, /datapool/home/fengbx/data3/test/results/test_result/quality_control/P25-Par-2/P25-Par-2.clean.2.fastq.gz
+    wildcards: sample=P25-Par-2
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:14:23 2024]
+Finished job 37.
+10 of 39 steps (26%) done
+Select jobs to execute...
+
+[Sat May 25 01:14:23 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-Regrow-1-D8-3.log
+    jobid: 36
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.rm_rRNA.fq.2.gz
+    wildcards: sample=P25-Regrow-1-D8-3
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:30:34 2024]
+Finished job 29.
+11 of 39 steps (28%) done
+Select jobs to execute...
+
+[Sat May 25 01:30:34 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-Regrow-1-D8-1.log
+    jobid: 28
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.rm_rRNA.fq.2.gz
+    wildcards: sample=P25-Regrow-1-D8-1
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:38:39 2024]
+Finished job 17.
+12 of 39 steps (31%) done
+Select jobs to execute...
+
+[Sat May 25 01:38:39 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-1/P25-Par-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-1/P25-Par-1.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-1/P25-Par-1Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-Par-1.log
+    jobid: 16
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-1/P25-Par-1Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-1/P25-Par-1.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-1/P25-Par-1.rm_rRNA.fq.1.gz
+    wildcards: sample=P25-Par-1
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:44:58 2024]
+Finished job 9.
+13 of 39 steps (33%) done
+Select jobs to execute...
+
+[Sat May 25 01:44:58 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-2.log
+    jobid: 8
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-2/P25-D16-2.rm_rRNA.fq.1.gz
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:48:06 2024]
+Finished job 5.
+14 of 39 steps (36%) done
+Select jobs to execute...
+
+[Sat May 25 01:48:06 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-1.log
+    jobid: 4
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-1/P25-D16-1.rm_rRNA.fq.2.gz
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:51:55 2024]
+Finished job 13.
+15 of 39 steps (38%) done
+Select jobs to execute...
+
+[Sat May 25 01:51:55 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-D16-3.log
+    jobid: 12
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-D16-3/P25-D16-3.rm_rRNA.fq.1.gz
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:53:38 2024]
+Finished job 25.
+16 of 39 steps (41%) done
+Select jobs to execute...
+
+[Sat May 25 01:53:38 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-3/P25-Par-3.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-3/P25-Par-3.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-3/P25-Par-3Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-Par-3.log
+    jobid: 24
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-3/P25-Par-3Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-3/P25-Par-3.rm_rRNA.fq.2.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-3/P25-Par-3.rm_rRNA.fq.1.gz
+    wildcards: sample=P25-Par-3
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:54:13 2024]
+Finished job 33.
+17 of 39 steps (44%) done
+Select jobs to execute...
+
+[Sat May 25 01:54:13 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-Regrow-1-D8-2.log
+    jobid: 32
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.rm_rRNA.fq.2.gz
+    wildcards: sample=P25-Regrow-1-D8-2
+    resources: tmpdir=/tmp
+
+[Sat May 25 01:57:05 2024]
+Finished job 21.
+18 of 39 steps (46%) done
+Select jobs to execute...
+
+[Sat May 25 01:57:05 2024]
+rule mapping:
+    input: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-2/P25-Par-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-2/P25-Par-2.rm_rRNA.fq.2.gz
+    output: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-2/P25-Par-2Aligned.sortedByCoord.out.bam
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/mapping/P25-Par-2.log
+    jobid: 20
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-2/P25-Par-2Aligned.sortedByCoord.out.bam; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-2/P25-Par-2.rm_rRNA.fq.1.gz, /datapool/home/fengbx/data3/test/results/test_result/remove_rRNA/fastq/P25-Par-2/P25-Par-2.rm_rRNA.fq.2.gz
+    wildcards: sample=P25-Par-2
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:10:51 2024]
+Finished job 36.
+19 of 39 steps (49%) done
+Select jobs to execute...
+
+[Sat May 25 02:10:51 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-Regrow-1-D8-3.log
+    jobid: 35
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-Regrow-1-D8-3
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:11:12 2024]
+Finished job 35.
+20 of 39 steps (51%) done
+[Sat May 25 02:15:57 2024]
+Finished job 16.
+21 of 39 steps (54%) done
+Select jobs to execute...
+
+[Sat May 25 02:15:57 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-1/P25-Par-1Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-1/P25-Par-1.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-1/P25-Par-1.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-Par-1.log
+    jobid: 15
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-1/P25-Par-1.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-1/P25-Par-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-Par-1
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:16:17 2024]
+Finished job 15.
+22 of 39 steps (56%) done
+[Sat May 25 02:16:26 2024]
+Finished job 28.
+23 of 39 steps (59%) done
+Select jobs to execute...
+
+[Sat May 25 02:16:26 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-Regrow-1-D8-1.log
+    jobid: 27
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-Regrow-1-D8-1
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:16:46 2024]
+Finished job 27.
+24 of 39 steps (62%) done
+[Sat May 25 02:16:55 2024]
+Finished job 8.
+25 of 39 steps (64%) done
+Select jobs to execute...
+
+[Sat May 25 02:16:55 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-2.log
+    jobid: 7
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-2/P25-D16-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-2
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:17:14 2024]
+Finished job 7.
+26 of 39 steps (67%) done
+[Sat May 25 02:18:57 2024]
+Finished job 4.
+27 of 39 steps (69%) done
+Select jobs to execute...
+
+[Sat May 25 02:18:57 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-1.log
+    jobid: 3
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-1/P25-D16-1Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-1
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:19:16 2024]
+Finished job 3.
+28 of 39 steps (72%) done
+[Sat May 25 02:21:28 2024]
+Finished job 12.
+29 of 39 steps (74%) done
+Select jobs to execute...
+
+[Sat May 25 02:21:28 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-D16-3.log
+    jobid: 11
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-D16-3/P25-D16-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-D16-3
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:21:47 2024]
+Finished job 11.
+30 of 39 steps (77%) done
+[Sat May 25 02:22:37 2024]
+Finished job 32.
+31 of 39 steps (79%) done
+Select jobs to execute...
+
+[Sat May 25 02:22:37 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-Regrow-1-D8-2.log
+    jobid: 31
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-Regrow-1-D8-2
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:22:57 2024]
+Finished job 31.
+32 of 39 steps (82%) done
+[Sat May 25 02:23:20 2024]
+Finished job 24.
+33 of 39 steps (85%) done
+Select jobs to execute...
+
+[Sat May 25 02:23:20 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-3/P25-Par-3Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-3/P25-Par-3.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-3/P25-Par-3.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-Par-3.log
+    jobid: 23
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-3/P25-Par-3.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-3/P25-Par-3Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-Par-3
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:23:39 2024]
+Finished job 23.
+34 of 39 steps (87%) done
+[Sat May 25 02:30:31 2024]
+Finished job 20.
+35 of 39 steps (90%) done
+Select jobs to execute...
+
+[Sat May 25 02:30:31 2024]
+rule featureCounts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-2/P25-Par-2Aligned.sortedByCoord.out.bam
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-2/P25-Par-2.featurecounts.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-2/P25-Par-2.featurecounts.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/featureCounts/P25-Par-2.log
+    jobid: 19
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-2/P25-Par-2.featurecounts.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/mapping_expression/P25-Par-2/P25-Par-2Aligned.sortedByCoord.out.bam
+    wildcards: sample=P25-Par-2
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:30:51 2024]
+Finished job 19.
+36 of 39 steps (92%) done
+Select jobs to execute...
+
+[Sat May 25 02:30:51 2024]
+rule merge_counts:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-1/P25-Par-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-2/P25-Par-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-3/P25-Par-3.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.featurecounts.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/merge_counts.log
+    jobid: 2
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-2/P25-Par-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-2/P25-Regrow-1-D8-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-3/P25-D16-3.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-1/P25-Regrow-1-D8-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Regrow-1-D8-3/P25-Regrow-1-D8-3.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-2/P25-D16-2.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-1/P25-Par-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-D16-1/P25-D16-1.featurecounts.all.txt, /datapool/home/fengbx/data3/test/results/test_result/read_counts/P25-Par-3/P25-Par-3.featurecounts.all.txt; Set of input files has changed since last execution; Code has changed since last execution
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:31:00 2024]
+Finished job 2.
+37 of 39 steps (95%) done
+Select jobs to execute...
+
+[Sat May 25 02:31:00 2024]
+rule generate_sample_info:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    output: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    log: /datapool/home/fengbx/data3/test/results/test_result/logs/sample_info.log
+    jobid: 1
+    reason: Missing output files: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv; Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/count.all.txt
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:31:02 2024]
+Finished job 1.
+38 of 39 steps (97%) done
+Select jobs to execute...
+
+[Sat May 25 02:31:02 2024]
+localrule all:
+    input: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    jobid: 0
+    reason: Input files updated by another job: /datapool/home/fengbx/data3/test/results/test_result/read_counts/result/sample_info.csv
+    resources: tmpdir=/tmp
+
+[Sat May 25 02:31:02 2024]
+Finished job 0.
+39 of 39 steps (100%) done
+Complete log: .snakemake/log/2024-05-24T233053.853415.snakemake.log

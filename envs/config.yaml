@@ -1,0 +1,22 @@
+samples:
+  - Sample-1
+  - Sample-2
+  # 其他样本
+
+sc_samples:
+  - sc-1
+  - sc-2
+  - sc-3
+
+path: "Your_input_data"
+sc_fastq_path: "Your_input_scRNA_data"
+output_path: "output_path"
+genome_index_path: "Your_STAR_genome_path"
+rRNA_index: "rRNA_path"
+GTF: "gtf_doc_path"
+count_matrix: "scripts/Count_matrix.py"
+sample_info: "scripts/generate_sample_info.py"
+pathway_info: "refer/pathway_class_information.csv"
+hm_gene: "refer/human_metabolic_genes.csv"
+cellranger_transcriptome: "path_to_cellranger_transcriptome_GRCh38-2020-A"
+
